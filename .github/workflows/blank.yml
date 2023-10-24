@@ -27,13 +27,3 @@ jobs:
       - name: Run Docker Compose
         run: |
           docker-compose up -d
-
-      - name: Push image to Snowflake Images Repositories
-        uses: snowflakedb/snowflake-images-action@v1
-        with:
-          username: my-username
-          password: my-password
-          registry: snowflakeimages.azurecr.io
-          image: crseektest.azurecr.io/my-app:v1
-          tags:
-            - v1		  
